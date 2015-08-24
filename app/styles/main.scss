@@ -14,6 +14,7 @@
  */
 $brand-primary: #464646;
 $brand-accent: #FFBC54;
+$body-bg: #fafafa;
 $grid-gutter-width: 20px;
 $breakpoint: 700px;
 
@@ -24,6 +25,7 @@ $breakpoint: 700px;
 body {
   font-family: 'Quicksand';
   color: $brand-primary;
+  background: $body-bg;
 }
 
 a,
@@ -77,12 +79,24 @@ body,
 .title {
   font-family: 'Lora', 'Georgia', 'Palatino', times;
   font-size: 70px;
+  padding: 12px 0 20px;
+  text-shadow: 1px 1px 1px #ccc;
+  // transition: text-shadow .18s ease;
+  &:hover {
+    // text-shadow: 3px 3px 1px #bbb;
+  }
+
+  @media (min-width: $breakpoint) {
+    padding: 16px 0 0;
+
+  }
 
   span {
     font-style: italic;
     font-weight: bold;
     padding-left: $grid-gutter-width / 2;
   }
+
 }
 
 .subtitle {
@@ -189,7 +203,9 @@ body,
     text-transform: uppercase;
     text-decoration: none;
     color: #337ab7;
+
     &:hover {
+      color: #337ab7;
       text-decoration: underline;
     }
   }
