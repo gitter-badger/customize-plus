@@ -3,10 +3,31 @@ html.no-js(lang='en')
   head
     meta(charset='utf-8')
     title Customize Plus | PlusWP
-    meta(name='description' content='')
+    meta(name='description' content='Plugin to enhance and extend the WordPress Customize. By PlusWP.')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     meta(name='author' content='PlusWP <dev@pluswp.com> (http://pluswp.com)')
     //- Place favicon.ico and apple-touch-icon.png in the root directory
+    - var STATC_URL = 'https://raw.githubusercontent.com/PlusWP/roots/master/design/common/favicons';
+
+    link(rel='apple-touch-icon', sizes='57x57', href=STATC_URL + '/apple-touch-icon-57x57.png')
+    link(rel='apple-touch-icon', sizes='60x60', href=STATC_URL + '/apple-touch-icon-60x60.png')
+    link(rel='apple-touch-icon', sizes='72x72', href=STATC_URL + '/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='76x76', href=STATC_URL + '/apple-touch-icon-76x76.png')
+    link(rel='apple-touch-icon', sizes='114x114', href=STATC_URL + '/apple-touch-icon-114x114.png')
+    link(rel='apple-touch-icon', sizes='120x120', href=STATC_URL + '/apple-touch-icon-120x120.png')
+    link(rel='apple-touch-icon', sizes='144x144', href=STATC_URL + '/apple-touch-icon-144x144.png')
+    link(rel='apple-touch-icon', sizes='152x152', href=STATC_URL + '/apple-touch-icon-152x152.png')
+    link(rel='apple-touch-icon', sizes='180x180', href=STATC_URL + '/apple-touch-icon-180x180.png')
+    link(rel='icon', type='image/png', href=STATC_URL + '/favicon-32x32.png', sizes='32x32')
+    link(rel='icon', type='image/png', href=STATC_URL + '/android-chrome-192x192.png', sizes='192x192')
+    link(rel='icon', type='image/png', href=STATC_URL + '/favicon-96x96.png', sizes='96x96')
+    link(rel='icon', type='image/png', href=STATC_URL + '/favicon-16x16.png', sizes='16x16')
+    link(rel='manifest', href=STATC_URL + '/manifest.json')
+    meta(name='apple-mobile-web-app-title', content='PlusWp')
+    meta(name='application-name', content='PlusWp')
+    meta(name='msapplication-TileColor', content='#464646')
+    meta(name='msapplication-TileImage', content=STATC_URL + '/mstile-144x144.png')
+    meta(name='theme-color', content='#ffffff')
 
     // build:css styles/vendor.css
     //- bower:css
@@ -27,7 +48,7 @@ html.no-js(lang='en')
             img.logo(src='https://raw.githubusercontent.com/PlusWP/roots/master/design/customize-plus/logo.png', title='Logo Customize Plus', alt='Customize Plus')
             h1.title Customize
               span Plus
-            h2.subtitle Empower and extend the WordPress customize.
+            h2.subtitle Enhance and extend the WordPress Customize.
 
           article.article
             p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, id! Rerum voluptatibus excepturi, porro dolorem voluptatem minima doloribus hic veritatis amet qui tenetur consequatur. Doloremque earum quo magni ipsam tenetur.
@@ -35,18 +56,11 @@ html.no-js(lang='en')
             .donate
               p.text-small Customize Plus is free and open source software, if you find it useful consider a donation
 
-              form(action='https://www.paypal.com/cgi-bin/webscr', method='post')
-                // Identify your business so that you can collect the payments.
-                input(type='hidden', name='business', value='donations@kcparkfriends.org')
-                // Specify a Donate button.
-                input(type='hidden', name='cmd', value='_donations')
-                // Specify details about the contribution
-                input(type='hidden', name='item_name', value='Friends of the Park')
-                input(type='hidden', name='item_number', value='Fall Cleanup Campaign')
-                input(type='hidden', name='currency_code', value='USD')
-                // Display the payment button.
-                input(type='image', name='submit', border='0', src='https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif', alt='PayPal - The safer, easier way to pay online')
-                img(alt='', border='0', width='1', height='1', src='https://www.paypalobjects.com/en_US/i/scr/pixel.gif')
+              form(action='https://www.paypal.com/cgi-bin/webscr', method='post', target='_top')
+                input(type='hidden', name='cmd', value='_s-xclick')
+                input(type='hidden', name='hosted_button_id', value='HKXV3VPDUURPJ')
+                input(type='image', src='https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif', border='0', name='submit', alt='PayPal – The safer, easier way to pay online.')
+                img(alt='', border='0', src='https://www.paypalobjects.com/en_GB/i/scr/pixel.gif', width='1', height='1')
 
               p.text-small or
               a.btn-link(href='https://github.com/PlusWP/customize-plus-premium/') Checkout the premium version
@@ -56,7 +70,7 @@ html.no-js(lang='en')
 
             .row
               .col
-                a.btn(href='https://wordpress.org/plugins/customize-plus') Download
+                a.btn.btn-inverse(href='https://wordpress.org/plugins/customize-plus') Download
               .col
                 a.btn(href='https://github.com/PlusWP/customize-plus/') View on Github
               .col
@@ -72,8 +86,7 @@ html.no-js(lang='en')
 
     //- Google Analytics: change UA-XXXXX-X to be your site's ID.
     script.
-      //- (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      //- e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-42275376-1');ga('send','pageview');
+      (function(i,s,o,g,r,a,m){i.GoogleAnalyticsObject=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-61802810-2','auto');ga('send','pageview');
 
     //- jquery outside build tag, because is going to be 'cdnized'
     script(src='/bower_components/jquery/dist/jquery.js')

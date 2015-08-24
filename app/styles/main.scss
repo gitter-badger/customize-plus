@@ -82,10 +82,6 @@ body,
   font-size: 70px;
   padding: 12px 0 20px;
   text-shadow: 1px 1px 1px #ccc;
-  // transition: text-shadow .18s ease;
-  &:hover {
-    // text-shadow: 3px 3px 1px #bbb;
-  }
 
   @media (min-width: $breakpoint) {
     padding: 16px 0 0;
@@ -115,9 +111,15 @@ body,
 .text {
   font-size: 20px;
   line-height: 1.4em;
-  border-left: 4px solid #eee;
+  border-left: 4px solid #e2e2e2;
   padding-left: $grid-gutter-width * 2;
   margin-left: $grid-gutter-width;
+
+  &-small {
+    text-align: center;
+    font-size: 13px;
+    margin: $grid-gutter-width 0 0;
+  }
 }
 
 .donate {
@@ -129,13 +131,11 @@ body,
   }
 }
 
-.text-small {
-  text-align: center;
-  font-size: 13px;
-  margin: $grid-gutter-width 0 0;
-}
-
 .row {
+  float: left;
+  width: 100%;
+  clear: both;
+
   .btn {
     text-align: center;
     width: 100%;
@@ -152,12 +152,6 @@ body,
       }
     }
   }
-}
-
-.row {
-  float: left;
-  width: 100%;
-  clear: both;
 }
 
 .btn {
@@ -194,21 +188,21 @@ body,
       max-width: 70%;
     }
   }
+}
 
-  &-link {
-    text-align: center;
-    display: block;
-    padding: 10px 0;
-    font-weight: bold;
-    font-size: 20px;
-    text-transform: uppercase;
-    text-decoration: none;
+a.btn-link {
+  text-align: center;
+  display: block;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #337ab7;
+
+  &:hover {
     color: #337ab7;
-
-    &:hover {
-      color: #337ab7;
-      text-decoration: underline;
-    }
+    text-decoration: underline;
   }
 }
 
