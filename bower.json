@@ -1,0 +1,8 @@
+{
+  "name": "customize-plus.github.io",
+  "private": true,
+  "dependencies": {
+    "jquery": "~1.11.2",
+    "FitText.js": "~1.2.0"
+  }
+}

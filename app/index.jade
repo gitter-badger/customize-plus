@@ -1,0 +1,87 @@
+doctype html
+html.no-js(lang='en')
+  head
+    meta(charset='utf-8')
+    title @kuus | kunderikuus.net
+    meta(name='description' content='')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='author' content='kuus <kunderikuus@gmail.com> (http://kunderikuus.net)')
+    //- Place favicon.ico and apple-touch-icon.png in the root directory
+
+    // build:css styles/vendor.css
+    //- bower:css
+    //- endbower
+    // endbuild
+
+    link(href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Quicksand:300,400', rel='stylesheet', type='text/css')
+
+    // build:css styles/main.css
+    link(rel='stylesheet' href='styles/main.css')
+    // endbuild
+
+  body
+    .table
+      .table-cell
+        section.container
+          header.header
+            img.logo(src='images/logo.png', title='Logo Customize Plus', alt='Customize Plus')
+            h1.title Customize
+              span Plus
+            h2.subtitle Empower and extend the WordPress customize.
+
+          article.article
+            p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, id! Rerum voluptatibus excepturi, porro dolorem voluptatem minima doloribus hic veritatis amet qui tenetur consequatur. Doloremque earum quo magni ipsam tenetur.
+
+            .donate
+              p.text-small Customize Plus is free and open source software, if you find it useful consider a donation
+
+              form(action='https://www.paypal.com/cgi-bin/webscr', method='post')
+                // Identify your business so that you can collect the payments.
+                input(type='hidden', name='business', value='donations@kcparkfriends.org')
+                // Specify a Donate button.
+                input(type='hidden', name='cmd', value='_donations')
+                // Specify details about the contribution
+                input(type='hidden', name='item_name', value='Friends of the Park')
+                input(type='hidden', name='item_number', value='Fall Cleanup Campaign')
+                input(type='hidden', name='currency_code', value='USD')
+                // Display the payment button.
+                input(type='image', name='submit', border='0', src='https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif', alt='PayPal - The safer, easier way to pay online')
+                img(alt='', border='0', width='1', height='1', src='https://www.paypalobjects.com/en_US/i/scr/pixel.gif')
+
+              p.text-small or
+              a.btn-link(href='https://github.com/PlusWP/customize-plus-premium/') Checkout the premium version
+              //- a.btn.btn-block.btn-inverse(href='https://github.com/PlusWP/customize-plus-premium/') Checkout the premium version
+
+          footer.footer
+
+            .row
+              .col
+                a.btn(href='https://wordpress.org/plugins/customize-plus') Download
+              .col
+                a.btn(href='https://github.com/PlusWP/customize-plus/') View on Github
+              .col
+                a.btn(href='https://github.com/PlusWP/customize-plus/wiki/') Documentation
+
+            .credits
+              p &copy; All rights reserved, PlusWP 2015
+                span |
+                a(href='http://pluswp.com') pluswp.com
+                span |
+                a(href='mailto:dev@pluswp.com') dev [at] pluswp.com
+
+
+    //- Google Analytics: change UA-XXXXX-X to be your site's ID.
+    script.
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-42275376-1');ga('send','pageview');
+
+    //- jquery outside build tag, because is going to be 'cdnized'
+    script(src='/bower_components/jquery/dist/jquery.js')
+
+    // build:js scripts/inline.js
+    //- bower:js
+    script(src='/bower_components/FitText.js/jquery.fittext.js')
+    //- endbower
+
+    script(src='scripts/main.js')
+    // endbuild
