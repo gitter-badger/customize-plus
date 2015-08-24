@@ -1,4 +1,5 @@
-uglify--customize-name_cache.json
+dist
+.publish
 
 # Generic front-end related folders
 node_modules
