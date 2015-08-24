@@ -25,7 +25,9 @@ $breakpoint: 700px;
 body {
   font-family: 'Quicksand';
   color: $brand-primary;
-  background: $body-bg;
+  background-color: $body-bg;
+  background: url(https://raw.githubusercontent.com/PlusWP/roots/master/design/common/textures/contemporary_china.png);
+}
 }
 
 a,
